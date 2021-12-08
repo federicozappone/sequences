@@ -23,8 +23,6 @@ print(all_data)
 
 # plot data
 
-# plot flight data
-
 fig_size = plt.rcParams["figure.figsize"]
 fig_size[0] = 15
 fig_size[1] = 5
