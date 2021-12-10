@@ -141,7 +141,7 @@ class GRU(nn.Module):
 
 
 # create model, loss and optimizer
-model = LSTM().cuda()
+model = GRU().cuda()
 loss_function = nn.MSELoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
