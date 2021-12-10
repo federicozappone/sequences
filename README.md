@@ -1,4 +1,6 @@
-# Simple Sin Time Series Prediction in Pytorch Using LSTM and GRU
+# Simple Time Series Prediction in Pytorch Using LSTM and GRU
+
+![image](images/test.png)
 
 ## Table of contents
 
@@ -24,7 +26,7 @@ Gated Recurrent Unit:
 
 ```
 GRU(
-  (lstm): GRU(1, 100)
+  (gru): GRU(1, 100)
   (fc1): Linear(in_features=100, out_features=128, bias=True)
   (fc2): Linear(in_features=128, out_features=1, bias=True)
   (relu): ReLU()
