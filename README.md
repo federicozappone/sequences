@@ -1,8 +1,35 @@
+# Simple Time Series Prediction in Pytorch Using LSTM and GRU
+
 ## Table of contents
 
-- [Quick start](#quick-start)
+- [Models](#models)
+- [Quick Start](#quick-start)
 - [Creators](#creators)
 - [Copyright and license](#copyright-and-license)
+
+## Models
+
+Long Short Term Memory:
+
+```
+LSTM(
+  (lstm): LSTM(1, 100)
+  (fc1): Linear(in_features=100, out_features=128, bias=True)
+  (fc2): Linear(in_features=128, out_features=1, bias=True)
+  (relu): ReLU()
+)
+```
+
+Gated Recurrent Unit:
+
+```
+GRU(
+  (lstm): GRU(1, 100)
+  (fc1): Linear(in_features=100, out_features=128, bias=True)
+  (fc2): Linear(in_features=128, out_features=1, bias=True)
+  (relu): ReLU()
+)
+```
 
 ## Quick Start
 
