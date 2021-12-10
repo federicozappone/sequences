@@ -119,7 +119,7 @@ class GRU(nn.Module):
 
         self.hidden_cell = torch.zeros(self.num_layers, 1, self.hidden_layer_size).cuda()
 
-        self.lstm = nn.GRU(self.input_size, self.hidden_layer_size, num_layers=self.num_layers)
+        self.gru = nn.GRU(self.input_size, self.hidden_layer_size, num_layers=self.num_layers)
         self.fc1 = nn.Linear(self.hidden_layer_size, 128)
         self.fc2 = nn.Linear(128, self.output_size)
         self.relu = nn.ReLU()
@@ -130,7 +130,7 @@ class GRU(nn.Module):
     def forward(self, input_seq):
         self.set_hidden_cell_to_zero()
         # propagate input through GRU
-        out, self.hidden_cell = self.lstm(input_seq.view(len(input_seq), 1, -1), self.hidden_cell)
+        out, self.hidden_cell = self.gru(input_seq.view(len(input_seq), 1, -1), self.hidden_cell)
 
         out = self.relu(out.view(len(input_seq), -1))
         out = self.fc1(out)
@@ -149,7 +149,7 @@ print("model:")
 print(model)
 
 
-epochs = 100
+epochs = 150
 
 print(f"training for {epochs} epochs")
 
