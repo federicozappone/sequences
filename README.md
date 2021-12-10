@@ -1,4 +1,4 @@
-# Simple Time Series Prediction in Pytorch Using LSTM and GRU
+# Simple Sin Time Series Prediction in Pytorch Using LSTM and GRU
 
 ## Table of contents
 
