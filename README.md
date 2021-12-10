@@ -33,13 +33,9 @@ GRU(
 
 ## Quick Start
 
-Install torch and torchvision using pip:
+Install torch and torchvision following the [official website instructions](https://pytorch.org/get-started/locally/):
 
-```
-pip install torch==1.10.0+cu113 torchvision==0.11.1+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
-```
-
-Install the dependencies:
+Install the rest of the dependencies:
 
 ```
 pip install -r requirements.txt
