@@ -141,15 +141,17 @@ class GRU(nn.Module):
 
 
 # create model, loss and optimizer
-model = GRU().cuda()
+model = LSTM().cuda()
 loss_function = nn.MSELoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
-print("model")
+print("model:")
 print(model)
 
 
 epochs = 100
+
+print(f"training for {epochs} epochs")
 
 for i in range(epochs):
     for seq, labels in train_inout_seq:
